@@ -1,0 +1,74 @@
+#botonc{
+    margin: 50px 50px;
+    border: 1px solid;
+   }
+   
+   #editar2{
+       background: rgba(0, 60, 255);
+       width:fit-content;
+       margin-top:10px;
+   }
+
+.divboton{
+    display: grid;
+    grid-template-columns:100px 100px;
+    grid-column-gap:20px;
+    justify-content: center;
+}
+
+.tdboton{
+    display:flex ;
+    width:100%;
+    justify-content:center;
+}
+th{
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+button{
+    border: none;
+    border-radius:20px;
+    padding:6px;
+    
+}
+.eliminar{
+ background: #ff0000bd;
+}
+
+.editar{
+    background: rgba(0, 60, 255);
+}
+
+
+.nombre{
+    padding:7px;
+    border:1px solid;
+    border-radius:50px;
+    
+    
+
+}
+
+.nombre:hover{
+    border: none;
+    outline:1px solid rgba(0, 195, 255, 0.5);
+}
+.nombre:active{
+    border: none;
+    outline:1px solid rgba(0, 195, 255, 0.5);
+}
+
+.formproducts{
+    display:flex ;
+    flex-direction: column  ;
+    width:400px;
+    margin:0  auto;
+    gap: 20px;
+}
+
+
+
