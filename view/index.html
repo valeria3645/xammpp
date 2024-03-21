@@ -15,11 +15,13 @@
                 <th scope="col">ID</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Descripción</th>
-                <th scope="col">Acción</th>
+                <th scope="col">Acciones</th>
             </tr>
         </thead>
         <!-- Cuerpo de la tabla -->
-        <tbody id="trpro"></tbody>
+        <tbody id="trpro">
+            <!-- Aquí se generarán las filas de la tabla dinámicamente -->
+        </tbody>
     </table>
 
     <!-- Botón "Nuevo" -->
@@ -40,6 +42,28 @@
                         <input type="text" name="nombre" class="form-control" placeholder="Nombre">
                         <textarea name="descripcion" class="form-control" placeholder="Descripción"></textarea>
                         <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de actualizar producto -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalActualizar">
+        <!-- Contenido del modal -->
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actualizar producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario para actualizar producto -->
+                    <form method="post" action="../controller/actualizarproductocontroller.php" id="formActualizar">
+                        <input type="hidden" name="id" id="updateId">
+                        <input type="text" name="nombre" class="form-control" id="updateNombre" placeholder="Nombre">
+                        <textarea name="descripcion" class="form-control" id="updateDescripcion" placeholder="Descripción"></textarea>
+                        <button type="submit" class="btn btn-primary" id="btnActualizar">Actualizar</button>
                     </form>
                 </div>
             </div>
