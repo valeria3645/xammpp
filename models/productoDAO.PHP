@@ -23,9 +23,12 @@ class ProductoDAO{
 
     public function insertarDatosProducto($nombre, $descripcion){
         $conexion = $this->conn->abrir_conexion();
-        $conexion = $conexion->prepare("INSERT INTO producto(nombre, descripcion) VALUES(:nombre, :descripcion)");
-        $ar = array(":nombre" => $nombre, ":descripcion" => $descripcion);
-        $conexion->execute($ar);
+        $conexion = new PDO('mysql:host=localhost;dbname=productos', 'root', 'VAleriaa');
+
+        $consulta = $conexion->prepare("INSERT INTO producto(nombre, descripcion) VALUES(:nombre, :descripcion)");
+$ar = array(":nombre" => $nombre, ":descripcion" => $descripcion);
+$consulta->execute($ar);
+
     }
 
     public function actualizarNombreYDescripcionProducto($Id, $nombre, $descripcion) {
